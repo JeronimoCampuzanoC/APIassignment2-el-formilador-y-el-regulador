@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 from algorithm1 import Algorithm1LFCO2025JCAP
 from algorithm2 import Algorithm2LFCO2025JCAP
+from algorithm3 import Algorithm3LFCO2025JCAP
+
+import io
+from contextlib import redirect_stdout
 
 app = FastAPI()
 
@@ -38,3 +42,21 @@ def filter_items():
     valid_items = [item for item in stored_strings if pda.string_check(item)]
     stored_strings = valid_items
     return {"Valid Strings": valid_items}
+
+@app.get("/show-process")
+def show_process():
+    global stored_strings
+    explainer = Algorithm3LFCO2025JCAP()
+
+    # This will capture all printed output
+    f = io.StringIO()
+    with redirect_stdout(f):
+        for i, string in enumerate(stored_strings):
+            print(f"\n=== String #{i+1}: {string} ===\n")
+            explainer.sentential(string)
+            print("\n--- Configuration ---\n")
+            explainer.configurationM(string)
+            print("\n=======================\n")
+
+    output = f.getvalue()
+    return output
