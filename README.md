@@ -85,7 +85,7 @@ After that we activate the web server
 python3 -m uvicorn main:app --reload
 ```
 
-And use streamlit to try the algorithms
+And in another terminal (in the same folder, you must activate the enviroment again)use streamlit to try the algorithms
 
 ```bash
 streamlit run app.py
