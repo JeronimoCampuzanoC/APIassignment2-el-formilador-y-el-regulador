@@ -13,6 +13,16 @@
 ██║     ██╔══╝  ██║   ██║
 ╚██████╗██║     ╚██████╔╝
  ╚═════╝╚═╝      ╚═════╝ 
+ ----------------------------
+           _____ _____ 
+     /\   |  __ \_   _|
+    /  \  | |__! || |  
+   / /\ \ |  ___/ | |  
+  / ____ \| |    _| |_ 
+ /_/    \_\_|   |_____|
+                       
+                       
+
 ```
 # 🧾 Table of Contents
 
@@ -61,15 +71,24 @@ And connect all of this through an API that will be queried by a web page to dis
 ## 📖 Explanation
 first we traduce the c++ algorithms to python
 
+Create the virtual enviroment and we install the following dependencies with the requirements file
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install fastapi uvicorn streamlit
+pip install -r requirements.txt
+```
 
+After that we activate the web server
 
+```bash
+python3 -m uvicorn main:app --reload
+```
 
+And use streamlit to try the algorithms
 
-## 📖 Deployment
-stream lit
-
+```bash
+streamlit run app.py
+```
 
 
