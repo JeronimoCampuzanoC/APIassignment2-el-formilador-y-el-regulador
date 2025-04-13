@@ -8,7 +8,7 @@ class Algorithm2LFCO2025JCAP:
             top = stack[-1]
 
             # Handle empty string as special case
-            if string_to_check == "":
+            if string_to_check == "ε":
                 return True
 
             # End of input, check if we should accept

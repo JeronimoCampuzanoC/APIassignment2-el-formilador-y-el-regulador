@@ -12,6 +12,9 @@ class Algorithm1LFCO2025JCAP:
         string_to_push += 'a' * (length_string // 2)
         string_to_push += 'b' * (length_string // 2)
 
+        if string_to_push == "" :
+            return "ε"
+
         return string_to_push
 
     def generate_non_grammar_strings(self) -> str:
