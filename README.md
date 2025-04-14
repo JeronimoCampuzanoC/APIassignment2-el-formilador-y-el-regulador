@@ -34,11 +34,6 @@
 6. [🚀 Running](#-running)
     - [Compilation](#compilation)
     - [Execution](#execution)
-7. [📖 Explanation](#-explanation)
-    - [Algorithm 1](#algorithm-1)
-    - [Algorithm 2](#algorithm-2)
-    - [Algorithm 3](#algorithm-3)
-
 ## 📖 Description
 This project focuses on implementing and analyzing a Context-Free Grammar (CFG) and a Pushdown Automaton (PDA) for language recognition. It consists of implementation of three main algorithms in the following order:
 
@@ -66,9 +61,6 @@ And connect all of this through an API that will be queried by a web page to dis
 ---
 
 ## 🚀 Running 
-
-
-## 📖 Explanation
 first we traduce the c++ algorithms to python
 
 Create the virtual enviroment and we install the following dependencies with the requirements file
